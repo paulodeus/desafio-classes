@@ -37,25 +37,44 @@
 //   guerreiro atacou usando espada
 
 
-class classeDoHeroi{
-    
-    constructor(nome, idade, tipo, ataque){
-        this.nome = nome
-        this.idade = idade
-        this.tipo = tipo
-        this.ataque = ataque
+class ClasseDoHeroi {
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+        this.ataque = "";
     }
 
-    atacar(){ 
-        console.log(`O ${this.tipo} atacou usando ${this.ataque}`)
+    atacar() {
+        switch (this.tipo) {
+            case "mago":
+                this.ataque = "usou magia";
+                break;
+            case "guerreiro":
+                this.ataque = "usou espada";
+                break;
+            case "monge":
+                this.ataque = "usou artes marciais";
+                break;
+            case "ninja":
+                this.ataque = "usou shuriken";
+                break;
+            default:
+                this.ataque = "ataque não definido";
+        }
 
+        console.log(`O ${this.tipo} atacou usando ${this.ataque}`);
     }
 }
-let guerreiro = new classeDoHeroi("Aleister", "19", "guerreiro", "espada")
-guerreiro.atacar()
-let mago = new classeDoHeroi("Gandalf", "660", "mago", "magia")
-mago.atacar()
-let monge = new classeDoHeroi("Aang", "12", "monge", "artes marciais")
-monge.atacar()
-let ninja = new classeDoHeroi("Po", "20", "ninja", "shuriken")
-ninja.atacar()
+
+let guerreiro = new ClasseDoHeroi("Aleister", "19", "guerreiro");
+guerreiro.atacar();
+
+let mago = new ClasseDoHeroi("Gandalf", "660", "mago");
+mago.atacar();
+
+let monge = new ClasseDoHeroi("Aang", "12", "monge");
+monge.atacar();
+
+let ninja = new ClasseDoHeroi("Po", "20", "ninja");
+ninja.atacar();
