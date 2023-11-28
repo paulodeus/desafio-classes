@@ -39,14 +39,23 @@
 
 class classeDoHeroi{
     
-    constructor(nome, tipo, dano){
+    constructor(nome, idade, tipo, ataque){
         this.nome = nome
+        this.idade = idade
         this.tipo = tipo
-        this.dano = dano
-        
+        this.ataque = ataque
+    }
+
+    atacar(){ 
+        console.log(`O ${this.tipo} atacou usando ${this.ataque}`)
+
     }
 }
-
-let guerreiro = new classeDoHeroi("Aleister, o ", "guerreiro, ", "espada")
-
-console.log(guerreiro.nome + guerreiro.tipo + " atacou usando " + guerreiro.dano)
+let guerreiro = new classeDoHeroi("Aleister", "19", "guerreiro", "espada")
+guerreiro.atacar()
+let mago = new classeDoHeroi("Gandalf", "660", "mago", "magia")
+mago.atacar()
+let monge = new classeDoHeroi("Aang", "12", "monge", "artes marciais")
+monge.atacar()
+let ninja = new classeDoHeroi("Po", "20", "ninja", "shuriken")
+ninja.atacar()
