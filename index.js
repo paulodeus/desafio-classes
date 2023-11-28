@@ -39,7 +39,14 @@
 
 class classeDoHeroi{
     
-    constructor(tipo, dano, resistencia) {
-      this.tipo = tipo;
-      this.dano = dano;
-      this.resistencia = resistencia;
+    constructor(nome, tipo, dano){
+        this.nome = nome
+        this.tipo = tipo
+        this.dano = dano
+        
+    }
+}
+
+let guerreiro = new classeDoHeroi("Aleister, o ", "guerreiro, ", "espada")
+
+console.log(guerreiro.nome + guerreiro.tipo + " atacou usando " + guerreiro.dano)
